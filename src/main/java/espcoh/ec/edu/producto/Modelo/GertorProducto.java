@@ -20,9 +20,9 @@ public class GertorProducto {
         if (cont < productos.length) {
             productos[cont] = gestor;
             cont++;
-        } else {
+        } /*else {
             System.out.println("Error: No se puede agregar más productos, el vector está lleno.");
-        }
+        }*/
     }
 
     public Gestor[] listarProductos() {

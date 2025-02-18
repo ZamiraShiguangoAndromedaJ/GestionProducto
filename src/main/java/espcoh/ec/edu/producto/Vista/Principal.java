@@ -50,6 +50,8 @@ public class Principal extends javax.swing.JFrame {
         lblNoDisponible = new javax.swing.JLabel();
         btbVerLista = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
+        lblIde = new javax.swing.JLabel();
+        txtIde = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,6 +110,8 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        lblIde.setText("ID");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -118,24 +122,6 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(rbnDisponible)
-                        .addGap(18, 18, 18)
-                        .addComponent(rbnNoDisponible))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPrecio)
-                            .addComponent(lblNombre))
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtPrecioProduc, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNombreProduc, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblTitulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(125, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addComponent(lblDisponible)
@@ -150,21 +136,45 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnLimpiar)
                 .addGap(38, 38, 38))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(rbnDisponible)
+                        .addGap(18, 18, 18)
+                        .addComponent(rbnNoDisponible))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblPrecio)
+                            .addComponent(lblNombre)
+                            .addComponent(lblIde, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(43, 43, 43)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtPrecioProduc, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNombreProduc, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblTitulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtIde, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblIde)
+                    .addComponent(txtIde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNombre)
                     .addComponent(txtNombreProduc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPrecio)
                     .addComponent(txtPrecioProduc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbnDisponible)
                     .addComponent(rbnNoDisponible))
@@ -173,7 +183,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(btnGuardar)
                     .addComponent(btbVerLista)
                     .addComponent(btnLimpiar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDisponible)
                     .addComponent(lblNoDisponible))
@@ -188,7 +198,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void rbnDisponibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnDisponibleActionPerformed
-        rbnDisponible.setSelected(false);
+       // rbnDisponible.setSelected(false);
 
         //DISPONIBLE
         // TODO add your handling code here:
@@ -203,6 +213,7 @@ public class Principal extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
 
         Gestor producto = new Gestor();
+        producto.setId(Integer.parseInt(txtIde.getText()));
         producto.setNombre(txtNombreProduc.getText());
         producto.setPrecio(Float.parseFloat(txtPrecioProduc.getText()));
         producto.setDisponibilidad(rbnDisponible.isSelected());
@@ -211,7 +222,12 @@ public class Principal extends javax.swing.JFrame {
         limpiar();
 // TODO add your handling code here:
     }//GEN-LAST:event_btnGuardarActionPerformed
-    public String getTitulo() {
+
+    public int getIde() {
+        return Integer.parseInt(txtIde.getText());
+    }
+
+    public String getNombre() {
         return txtNombreProduc.getText();
 
     }
@@ -225,9 +241,9 @@ public class Principal extends javax.swing.JFrame {
         return rbnDisponible.isSelected();
     }
 
-    public void mostrarMensaje(String mensaje) {
+   /* public void mostrarMensaje(String mensaje) {
         txaListaDisponible.setText(mensaje);
-    }
+    }*/
 
     public void limpiar() {
 
@@ -235,6 +251,7 @@ public class Principal extends javax.swing.JFrame {
         txtPrecioProduc.setText("");
         rbnDisponible.setSelected(false);
         rbnNoDisponible.setSelected(false);
+        btngDisposición.clearSelection();
     }
 
     private void btbVerListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbVerListaActionPerformed
@@ -245,11 +262,11 @@ public class Principal extends javax.swing.JFrame {
         for (Gestor producto : productos) {
             if (producto != null) {
                 if (producto.isDisponibilidad()) {
-                    listaDisponible.append("Nombre: ").append(producto.getNombre())
+                    listaDisponible.append("ID :").append(producto.getId()).append("Nombre: ").append(producto.getNombre())
                             .append(", Precio: ").append(producto.getPrecio())
                             .append("\n");
                 } else {
-                    listaNoDisponible.append("Nombre: ").append(producto.getNombre())
+                    listaNoDisponible.append("ID :").append(producto.getId()).append("Nombre: ").append(producto.getNombre())
                             .append(", Precio: ").append(producto.getPrecio())
                             .append("\n");
                 }
@@ -266,6 +283,7 @@ public class Principal extends javax.swing.JFrame {
         // limpiar();
         txtNombreProduc.setText("");
         txtPrecioProduc.setText("");
+        txtIde.setText(" ");
         rbnDisponible.setSelected(false);
         rbnNoDisponible.setSelected(false);
         // TODO add your handling code here:   
@@ -283,6 +301,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblDisponible;
+    private javax.swing.JLabel lblIde;
     private javax.swing.JLabel lblNoDisponible;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblPrecio;
@@ -291,6 +310,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbnNoDisponible;
     private javax.swing.JTextArea txaListaDisponible;
     private javax.swing.JTextArea txaListaNoDisponible;
+    private javax.swing.JTextField txtIde;
     private javax.swing.JTextField txtNombreProduc;
     private javax.swing.JTextField txtPrecioProduc;
     // End of variables declaration//GEN-END:variables

@@ -46,7 +46,8 @@ public class Constructor {
         if (this.principal != null) {
 
             Gestor objProducto = new Gestor();
-            objProducto.setNombre(principal.getTitulo());
+            objProducto.setId(principal.getIde());
+            objProducto.setNombre(principal.getNombre());
             objProducto.setPrecio(Float.parseFloat(principal.getPrecio()));
             objProducto.setDisponibilidad(principal.getDisponibilidad());
             this.gertorProducto.agregarProducto(objProducto);
